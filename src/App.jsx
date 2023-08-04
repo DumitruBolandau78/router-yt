@@ -6,6 +6,8 @@ import About from "./Layouts/About";
 import Menu from "./Components/Menu";
 import Vans from "./Layouts/Vans";
 
+import './data/server'
+
 function App() {
   return (
     <div className="App">

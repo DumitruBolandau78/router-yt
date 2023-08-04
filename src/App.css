@@ -160,6 +160,47 @@ header a:hover {
     border-radius: 10px;
 }
 
+.van-list {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 30px;
+    padding: 10px;
+}
+
+.van-list img {
+    width: 100%;
+    border-radius: 10px;
+    object-fit: cover;
+    object-position: center;
+}
+
+.van-type {
+    font-style: normal;
+    color: #fff;
+    padding: 10px 30px;
+    border-radius: 5px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.simple {
+    background-color: orangered;
+}
+
+.rugged {
+    background-color: #000;
+}
+
+.luxury {
+    background-color: green;
+}
+
+@media (max-width: 550px){
+    .van-list {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
 @media (max-width: 550px){
     .about-page-cta {
         flex-direction: column;
