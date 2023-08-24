@@ -1,15 +1,5 @@
 import { useEffect, useState } from "react";
-
-// server.create("van", {
-//   id: "6",
-//   name: "Green Wonder",
-//   price: 70,
-//   description:
-//     "With this van, you can take your travel life to the next level. The Green Wonder is a sustainable vehicle that's perfect for people who are looking for a stylish, eco-friendly mode of transport that can go anywhere.",
-//   imageUrl:
-//     "https://assets.scrimba.com/advanced-react/react-router/green-wonder.png",
-//   type: "rugged",
-// });
+import { Link } from "react-router-dom";
 
 const Vans = () => {
   const [vans, setVans] = useState([]);
@@ -22,12 +12,14 @@ const Vans = () => {
 
   const vanElements = vans.map(van => (
     <div key={van.id} className="van-tile">
-      <img src={van.imageUrl} alt="img" />
-      <div className="van-info">
-        <h3>{van.name}</h3>
-        <p>${van.price}<span>/Day</span></p>
-      </div>
-      <i className={`van-type ${van.type} selected`}>{van.type}</i>
+      <Link to={`/vans/${van.id}`}>
+        <img src={van.imageUrl} alt="img" />
+        <div className="van-info">
+          <h3>{van.name}</h3>
+          <p>${van.price}<span>/Day</span></p>
+        </div>
+        <i className={`van-type ${van.type} selected`}>{van.type}</i>
+      </Link>
     </div>
   ));
 
